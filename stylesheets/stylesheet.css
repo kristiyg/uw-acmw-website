@@ -253,6 +253,7 @@ form {
 }
 
 /*#main-content*/ h3 {
+  clear: both;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
   font-size: 18px;
   font-weight: bold;
@@ -477,3 +478,29 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {}
+
+strong {
+  font-weight: bold;
+}
+
+.officer {
+  text-align: center;
+  width: 200px;
+  margin: 1em 1.5em;
+  float: left;
+}
+
+.officer span {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.officer_image {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+
+.officer img {
+  width: 100%;
+}
