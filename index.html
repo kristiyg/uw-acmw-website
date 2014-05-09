@@ -106,11 +106,11 @@ Advisor Contacts
           <script>
           $(document).ready(function() {
             $.get( "https://graph.facebook.com/uwacmw/events?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE", function(response) {
-              console.log(response);
               for (var i = 0; i < response.data.length; i++) {
+                var cover = $("<img>").attr("src", "https://graph.facebook.com/" + response.data[i].id + "/picture?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE").css({"float": "left", "margin-right": "1em", "margin-bottom": "1em"});
                 var event_title = $("<h4>").text(response.data[i].name);
-                var event_time = $("<p>").text((new Date(response.data[i].start_time)).toDateString() + " at " + response.data[i].location);
-                var event_box = $("<div>").append(event_title).append(event_time);
+                var event_time = $("<p>").css("clear", "left").text((new Date(response.data[i].start_time)).toDateString() + " at " + response.data[i].location);
+                var event_box = $("<div>").append(cover).append(event_title).append(event_time);
                 $("#upcommingEvents").append(event_box);
               }
             });
