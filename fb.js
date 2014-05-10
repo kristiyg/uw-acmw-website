@@ -1,3 +1,5 @@
+AUTH_TOKEN = "242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE";
+
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '{242014209179761}',
@@ -17,7 +19,7 @@ window.fbAsyncInit = function() {
 
 $(document).ready(function() {
   // Get all the fb events for acmw
-  $.get( "https://graph.facebook.com/uwacmw/events?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE", function(response) {
+  $.get( "https://graph.facebook.com/uwacmw/events?access_token=" + AUTH_TOKEN, function(response) {
     // Sort chronologically
     response.data.reverse();
     var today = new Date();
@@ -28,7 +30,7 @@ $(document).ready(function() {
       if (event_date > today) {
         // Create "event" DOM object
         var cover = $("<img>")
-          .attr("src", "https://graph.facebook.com/" + response.data[i].id + "/picture?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE")
+          .attr("src", "https://graph.facebook.com/" + response.data[i].id + "/picture?access_token=" + AUTH_TOKEN)
           .css({"float": "left", "margin-right": "1em", "margin-bottom": "1em"});
         var event_title = $("<h4>")
           .text(response.data[i].name);
