@@ -1,5 +1,6 @@
 AUTH_TOKEN = "242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE";
 
+// Setup Facebook graph API infrastructure
 window.fbAsyncInit = function() {
   FB.init({
     appId      : '{242014209179761}',
@@ -17,6 +18,7 @@ window.fbAsyncInit = function() {
  }(document, 'script', 'facebook-jssdk'));
 
 
+// Populate Sidebar with Facebook Events
 $(document).ready(function() {
   // Get all the fb events for acmw
   $.get( "https://graph.facebook.com/uwacmw/events?access_token=" + AUTH_TOKEN, function(response) {
