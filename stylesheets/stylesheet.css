@@ -67,7 +67,7 @@ header {
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif; 
-  background: #2e7bcf url(../images/header-bg-purple.jpg) 0 0 repeat-x;
+  background: #A157D3;
   border-bottom: solid 1px #275da1;
 }
 
@@ -490,7 +490,7 @@ strong {
   float: left;
 }
 
-.officer span {
+.officer span.officer_name {
   font-size: larger;
   font-weight: bold;
 }
@@ -499,8 +499,32 @@ strong {
   width: 200px;
   height: 200px;
   overflow: hidden;
+  display: inline-block;
+}
+
+.candidate {
+  width: auto;
+}
+
+.candidate .blurb {
+  text-align: left;
+  margin-top: 1em;
 }
 
 .officer img {
   width: 100%;
+}
+
+#navbar {
+  float: right;
+}
+
+#navbar li {
+  display: inline;
+  padding: 1em;
+}
+
+#navbar a {
+  color: white;
+  text-decoration: none;
 }
