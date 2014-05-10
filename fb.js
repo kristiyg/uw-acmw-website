@@ -16,16 +16,29 @@ window.fbAsyncInit = function() {
 
 
 $(document).ready(function() {
+  // Get all the fb events for acmw
   $.get( "https://graph.facebook.com/uwacmw/events?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE", function(response) {
+    // Sort chronologically
     response.data.reverse();
     var today = new Date();
+
     for (var i = 0; i < response.data.length; i++) {
       var event_date = (new Date(response.data[i].start_time));
+      // Only display future events
       if (event_date > today) {
-        var cover = $("<img>").attr("src", "https://graph.facebook.com/" + response.data[i].id + "/picture?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE").css({"float": "left", "margin-right": "1em", "margin-bottom": "1em"});
-        var event_title = $("<h4>").text(response.data[i].name);
-        var event_time = $("<p>").css("clear", "left").text(event_date.toDateString() + " at " + response.data[i].location);
-        var link = $("<a>").attr("href", "https://www.facebook.com/events/" + response.data[i].id);
+        // Create "event" DOM object
+        var cover = $("<img>")
+          .attr("src", "https://graph.facebook.com/" + response.data[i].id + "/picture?access_token=242014209179761|E5cEM0s2iqY-WD95HfOvXJ4GymE")
+          .css({"float": "left", "margin-right": "1em", "margin-bottom": "1em"});
+        var event_title = $("<h4>")
+          .text(response.data[i].name);
+        var event_time = $("<p>")
+          .css("clear", "left")
+          .text(event_date.toDateString() + " at " + response.data[i].location);
+        var link = $("<a>")
+          .attr("href", "https://www.facebook.com/events/" + response.data[i].id);
+        
+        // Super glue everything together, and append to page
         link.append(cover).append(event_title).append(event_time)
         var event_box = $("<div>").append(link);
         $("#upcommingEvents").append(event_box);
