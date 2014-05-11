@@ -1,4 +1,4 @@
-uw-acmw.github.io
+UW ACMW Website
 =================
 
 Website
