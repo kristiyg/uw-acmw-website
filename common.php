@@ -25,6 +25,7 @@
         <ul id="navbar">
           <li><a href="index.php">Home</a></li>
           <li><a href="elections.php">Elections</a></li>
+          <li><a href="resources.php">Typical Events &amp; Resources</a></li>
         </ul>
       </div>
     </header>
