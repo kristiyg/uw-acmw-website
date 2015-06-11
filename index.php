@@ -26,13 +26,11 @@ top();
 
   <div>
     <div class="officer">
-      <div class="officer_image"><img src="images/zorah.jpg" alt="Chair" /></div><br/>
-      <span class="officer_name">Zorah Fung</span><br/>
+      <span class="officer_name">Sonja</span><br/>
       <span class="officer_position">Chair</span>
     </div>
     <div class="officer">
-      <div class="officer_image"><img src="images/olga.jpg" alt="Vice Chair" /></div><br/>
-      <span class="officer_name">Olga Zamaraeva</span><br/>
+      <span class="officer_name">Krittika</span><br/>
       <span class="officer_position">Vice Chair</span>
     </div>
     <div class="officer">
@@ -41,9 +39,20 @@ top();
       <span class="officer_position">Secretary</span>
     </div>
     <div class="officer">
-      <div class="officer_image"><img src="images/kim.jpg" alt="Treasurer" /></div><br/>
-      <span class="officer_name">Kimberly Sangwin</span><br/>
+      <span class="officer_name">Kristi</span><br/>
+      <span class="officer_position">Secretary</span>
+    </div>
+    <div class="officer">
+      <span class="officer_name">Minh</span><br/>
       <span class="officer_position">Treasurer</span>
+    </div>
+    <div class="officer">
+      <span class="officer_name">Jessica</span><br/>
+      <span class="officer_position">Public Relations</span>
+    </div>
+    <div class="officer">
+      <span class="officer_name">Clara</span><br/>
+      <span class="officer_position">Activities Coordinator</span>
     </div>
   </div>
 
@@ -66,7 +75,6 @@ Advisor Contacts
     <li><strong>Raven Avery</strong>: <a href="mailto:ravena@cs.washington.edu">ravena@cs.washington.edu</a>, CSE Undergraduate Advisor</li>
     <li><strong>Crystal Eney</strong>: <a href="mailto:ceney@cs.washington.edu">ceney@cs.washington.edu</a>, CSE Undergraduate Advisor</li>
     <li><strong>Elise deGoede Dorough</strong>: <a href="mailto:elised@cs.washington.edu">elised@cs.washington.edu</a>, CSE Undergraduate Advisor</li>
-    <li><strong>Helene Martin</strong>: <a href="mailto:ln@cs.washington.edu">ln@cs.washington.edu</a>, Faculty Advisor </li>
   </ul>
 </section>
 <?php bottom(); ?>
